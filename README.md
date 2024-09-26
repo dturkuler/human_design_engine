@@ -6,30 +6,34 @@ HD engine is a script for calculation of single, composite and multiple human de
 https://github.com/dturkuler/human_design_engine
 
 
+
+
 -------------------------------------------
 # issues to be fixed
 Error on types: 
 manifesting generator and generator compared to app.mybodygraph.com  and other bodygraph generators.
 
 Ex date: 21 feb 1968  
-mybodygraph: MG
-human_design_engine: G
+- mybodygraph: manifesting generator
+- human_design_engine: Generator
 
 Ex date: 19 Jan 1973
-mybodygraph: G
-human_design_engine: MG
+- mybodygraph: Generator
+- human_design_engine: manifesting generator
 
 **Correction:**
-**MG / G Case:** 
-Sacral is defined (can be Generator or Manifesting Generator)
-SC==true
+- **MG / G Case:** 
+	- Sacral is defined (can be Generator or Manifesting Generator)
+		- SC==true
 
-**Manifesting Generator**=>Check connections from motor centers to throat
-HT==TT | EM==TT |  RT==TT |  SC == TT 
+- **Manifesting Generator**=>Check connections from motor centers to throat
+	- HT==TT | EM==TT |  RT==TT |  SC == TT 
 
-**Generator**=> No connection to throat
+- **Generator**=> No connection to throat
 -------------------------------------------
-
+## Addition
+- Test.py added for testing
+- display func changed with print
 
 ## Supported Features
 ### Calculations of single features
