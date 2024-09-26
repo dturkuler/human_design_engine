@@ -1,5 +1,5 @@
 import hd_constants
-import swisseph as swe 
+import swisseph  as swe  
 import pandas as pd
 import numpy as np
 import itertools
@@ -359,6 +359,7 @@ def get_typ(active_channels_dict,active_chakras):
         typ(str): typ (G=Generator,MG=Manifesting,Generator,P=Projector,
                        M=Manifestor,R=Reflector)
     '''
+    print (active_channels_dict)
     #root is connected with throat? (direct,indirect)
     RT_TT_isconnected = (is_connected(active_channels_dict,"TT","SN","RT")
                          |is_connected(active_channels_dict,"TT","GC","SN","RT")
@@ -379,15 +380,15 @@ def get_typ(active_channels_dict,active_chakras):
 
     #if list is empty -> R-Typ
     if  not len(active_chakras): 
-        typ ="R"      
-    elif ("SL" in active_chakras) & (~TT_connects_SP_SL_HT_RT):
-        typ = "G"
+        typ ="REFLECTOR"      
+    elif ("SL" in active_chakras) & (TT_connects_SP_SL_HT_RT==False):
+        typ = "GENERATOR"
     elif ("SL" in active_chakras) & (TT_connects_SP_SL_HT_RT):
-        typ = "MG"   
-    elif ("SL" not in active_chakras) & (~TT_connects_SP_SL_HT_RT):
-        typ = "P"   
+        typ = "MANIFESTING GENERATOR"   
+    elif ("SL" not in active_chakras) & (TT_connects_SP_SL_HT_RT==False):
+        typ = "PROJECTOR"   
     elif ("SL" not in active_chakras) & (TT_connects_SP_SL_HT_RT):
-        typ = "M"
+        typ = "MANIFESTOR"
 
     return typ
     
@@ -675,8 +676,8 @@ def calc_single_hd_features(timestamp,report=False,channel_meaning=False,day_cha
                 print("active chakras: {}".format(active_chakras))
                 print("split: {}".format(split))
                 print("variables: {}".format(variables))
-                display(pd.DataFrame(date_to_gate_dict))
-                display(pd.DataFrame(active_channels_dict))
+                print(pd.DataFrame(date_to_gate_dict))
+                print(pd.DataFrame(active_channels_dict))
          
     if day_chart_only==False:
         return  typ,auth,inc_cross,inc_cross_typ,profile,split,date_to_gate_dict,active_chakras,active_channels_dict
@@ -940,7 +941,7 @@ def get_penta(persons_dict,report=False):
         df = df.replace({False:"o",True:"x"})
         df["index"] = list(persons_dict.keys())+["all"]
         df = df.set_index("index",drop=True)
-        display(df)
+        print(df)
     return round(sum_penta_gates/12*100,2)
 
 
