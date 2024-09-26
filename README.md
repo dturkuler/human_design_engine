@@ -1,16 +1,21 @@
 
 # Human design (HD) engine 
 HD engine is a script for calculation of single, composite and multiple human design features in python. 
-# Forked
 
+# Forked
+https://github.com/dturkuler/human_design_engine
+
+
+-------------------------------------------
 # issues to be fixed
 Error on types: 
 manifesting generator and generator compared to app.mybodygraph.com  and other bodygraph generators.
-Ex dates: 21 feb 1968  
+
+Ex date: 21 feb 1968  
 mybodygraph: MG
 human_design_engine: G
 
-Ex dates: 19 Jan 1973
+Ex date: 19 Jan 1973
 mybodygraph: G
 human_design_engine: MG
 
@@ -23,7 +28,7 @@ SC==true
 HT==TT | EM==TT |  RT==TT |  SC == TT 
 
 **Generator**=> No connection to throat
-
+-------------------------------------------
 
 
 ## Supported Features
