@@ -3,7 +3,7 @@
 HD engine is a script for calculation of single, composite and multiple human design features in python. 
 
 # Forked
-https://github.com/dturkuler/human_design_engine
+https://github.com/MicFell/human_design_engine
 
 
 
