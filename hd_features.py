@@ -1,5 +1,6 @@
 import hd_constants
 import swisseph  as swe  
+from IPython.display import display
 import pandas as pd
 import numpy as np
 import itertools
@@ -359,7 +360,7 @@ def get_typ(active_channels_dict,active_chakras):
         typ(str): typ (G=Generator,MG=Manifesting,Generator,P=Projector,
                        M=Manifestor,R=Reflector)
     '''
-    print (active_channels_dict)
+    #print (active_channels_dict)
     #root is connected with throat? (direct,indirect)
     RT_TT_isconnected = (is_connected(active_channels_dict,"TT","SN","RT")
                          |is_connected(active_channels_dict,"TT","GC","SN","RT")
@@ -676,8 +677,8 @@ def calc_single_hd_features(timestamp,report=False,channel_meaning=False,day_cha
                 print("active chakras: {}".format(active_chakras))
                 print("split: {}".format(split))
                 print("variables: {}".format(variables))
-                print(pd.DataFrame(date_to_gate_dict))
-                print(pd.DataFrame(active_channels_dict))
+                display(pd.DataFrame(date_to_gate_dict))
+                display(pd.DataFrame(active_channels_dict))
          
     if day_chart_only==False:
         return  typ,auth,inc_cross,inc_cross_typ,profile,split,date_to_gate_dict,active_chakras,active_channels_dict
