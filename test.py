@@ -11,7 +11,7 @@ birth_time= 1973,1,19,11,15,0 #konrad adenauer
 hours = hd.get_utc_offset_from_tz(birth_time,zone)
 
 ##manual time_zone offset calculation
-hours=8
+#hours=8
 
 timestamp = tuple(list(birth_time) + [hours])
 single_result = hd.calc_single_hd_features(timestamp,report=True,channel_meaning=True)
